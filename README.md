@@ -1,6 +1,19 @@
-My Failed attempt at a pure python frontend framework
+## My attempt at a pure python frontend
 
-Create a virtual environment
 
->> pip install -r requirements.txt
->> python -m front run
+```
+> virtualenv venv
+> source venv/bin/activate
+> pip install -r requirements.txt
+> python -m front
+
+[I 210613 01:57:09 server:335] Serving on http://127.0.0.1:8000
+[I 210613 01:57:09 handlers:62] Start watching changes
+[I 210613 01:57:09 handlers:64] Start detecting changes
+```
+
+HTML is generated using **dominate**.
+
+Javascript is generated using **transcrypt**.
+
+Server and file watch with **livereaload**.
