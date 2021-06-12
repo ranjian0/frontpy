@@ -9,7 +9,8 @@ def navbar():
             page = "index.html" if  i == 'home' else f"{i}.html"
             li(a(i.title(), href=f'{page}', cls='nav-link'), cls="nav-item")
 
-
+def action_btn():
+    button("Click Here", onclick="app.action()", cls="btn btn-primary")
 
 @export
 def index():
@@ -21,7 +22,7 @@ def index():
 
     with doc:
         navbar()
-        button("Click Me", onclick="app.action()", cls="btn btn-primary")
+        action_btn()
 
     return doc
 
@@ -35,7 +36,7 @@ def about():
 
     with doc:
         navbar()
-        button("Click Me", onclick="app.action()", cls="btn btn-primary")
+        action_btn()
 
     return doc
 
@@ -49,6 +50,6 @@ def contact():
 
     with doc:
         navbar()
-        button("Click Me", onclick="app.action()", cls="btn btn-primary")
+        action_btn()
 
     return doc
