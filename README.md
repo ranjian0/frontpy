@@ -12,8 +12,8 @@
 [I 210613 01:57:09 handlers:64] Start detecting changes
 ```
 
-HTML is generated using **dominate**.
+HTML is generated using [**dominate**](https://github.com/Knio/dominate).
 
-Javascript is generated using **transcrypt**.
+Javascript is generated using [**transcrypt**](https://github.com/QQuick/Transcrypt).
 
-Server and file watch with **livereaload**.
+Server and file watch with [**livereload**](https://github.com/lepture/python-livereload).
