@@ -16,7 +16,7 @@ def navbar():
 def container():
     with div(id="dataContainer", cls="container"):
         with div(cls="row justify-content-center").add(div(cls="col-4")):
-            h1("No items found!", cls="text-center")
+            h1("No items found!", cls="text-center", id="loadingText")
 
     with div(cls="container").add(div(cls="row justify-content-center")).add(div(cls="col-4 text-center")):
         button("Load Data", onclick="app.load_data()", cls="btn btn-primary")
