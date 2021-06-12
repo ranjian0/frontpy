@@ -1,4 +1,3 @@
-from os import O_NONBLOCK
 from front import export 
 from front.tags import *
 from front.cdn import bootstrap
@@ -17,6 +16,6 @@ def index():
             for i in ['home', 'about', 'contact']:
                 li(a(i.title(), href='/%s.html' % i))
 
-        button("Click Me", onclick="app.action()")
+        button("Click Me", onclick="app.action()", cls="btn btn-primary")
 
     return doc
