@@ -1,0 +1,6 @@
+dominate==2.6.0
+mypy==0.902
+mypy-extensions==0.4.3
+toml==0.10.2
+Transcrypt==3.9.0
+typing-extensions==3.10.0.0
