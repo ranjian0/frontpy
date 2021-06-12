@@ -2,26 +2,25 @@ import os
 import sys
 from pathlib import Path
 
-from .filewatcher import WatchFile
-
 def run():
     workdir = Path(os.curdir).absolute()
-    builddir = workdir / 'build'
 
-    # indexfile = workdir / 'index.py'
-    # watcheri = WatchFile(str(indexfile), callback=lambda : os.system(f'python {str(indexfile)}'))
+    build_default_files(workdir)
+
+    # -- start the server
+    os.system('python -m http.server --directory build')
+
+def build_default_files(workdir):
+    """
+    index.py to generate the html files
+    app.py to generate the javascript
+    """
+    indexfile = workdir / 'index.py'
+    os.system(f'python {str(indexfile)}')
 
     appfile = workdir / 'app.py'
-    watchera = WatchFile(str(appfile), callback=lambda : os.system(f'python -m transcrypt -od {builddir / "js"} {str(appfile)}'))
-    
+    os.system(f'python -m transcrypt -od {workdir / "build" / "js"} {str(appfile)}')
+
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        action = "build"
-    else:
-        action = sys.argv[1]
-
-    if action.lower() == 'run':
-        run()
-    else:
-        print(f"Unrecognized argument '{action}', use one of [run]")
+    run()
