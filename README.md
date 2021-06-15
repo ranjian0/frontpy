@@ -19,3 +19,6 @@ Javascript is generated using [**transcrypt**](https://github.com/QQuick/Transcr
 Server and file watch with [**livereload**](https://github.com/lepture/python-livereload).
 
 # DEMO
+
+![frontpydemo](https://user-images.githubusercontent.com/13909505/122062617-3e8ddc80-cdf8-11eb-8e98-77a8f18fca83.gif)
+
